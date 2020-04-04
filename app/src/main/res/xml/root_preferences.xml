@@ -14,13 +14,15 @@
   ~ limitations under the License.
   -->
 
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+    <PreferenceCategory app:title="Privacy">
 
         <EditTextPreference
+            app:icon="?attr/actionModeCutDrawable"
             app:key="signature"
-            app:title="@string/signature_title"
+            app:title="Change your username"
             app:useSimpleSummaryProvider="true" />
 
         <ListPreference
@@ -36,15 +38,15 @@
     <PreferenceCategory app:title="@string/sync_header">
 
         <SwitchPreferenceCompat
+            android:summary="Transport your schedule to the calendar"
+            app:icon="@android:drawable/ic_menu_my_calendar"
             app:key="sync"
-            app:title="@string/sync_title" />
+            app:title="Sync to Calendar" />
 
         <SwitchPreferenceCompat
             app:dependency="sync"
             app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+            app:title="Logout" />
 
     </PreferenceCategory>
 
